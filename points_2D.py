@@ -10,8 +10,8 @@ class Point():
         self.line_angle1 = 1
         self.line_angle2 = 1
 
-    def basic_plot(self, title="Unit Square"):
-        plt.title(title)
+    def basic_plot(self):
+
         plt.xticks([0, 0.2, 0.4, 0.6, 0.8, 1])
         plt.yticks([0, 0.2, 0.4, 0.6, 0.8, 1])
         plt.xlabel('X')

@@ -8,18 +8,12 @@ class Point():
         self.y = y
         self.z = z
 
-    def basic_plot(self, ax, title="Unit Cube"):
+    def basic_plot(self, ax):
 
-        ax.set_title(title)
         ax.set_xlabel('x', fontsize=12)
         ax.set_ylabel('y', fontsize=12)
         ax.set_zlabel('z', fontsize=12)
-        # plt.xticks([0, 0.2, 0.4, 0.6, 0.8, 1])
-        # plt.yticks([0, 0.2, 0.4, 0.6, 0.8, 1])
-        # plt.xlabel('X')
-        # plt.ylabel('Y')
-        # plt.xlim([0,1])
-        # plt.ylim([0,1])
+
 
     def plot_point(self, ax, col='r', size=5):
         self.basic_plot(ax)
