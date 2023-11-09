@@ -1,3 +1,6 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
 class Point():
     def __init__(self, x=0, y=0, z=0):
         self.xyz = np.array([x, y, z])
@@ -5,7 +8,7 @@ class Point():
         self.y = y
         self.z = z
 
-    def basic_plot(self, title="Unit Cube"):
+    def basic_plot(self, ax, title="Unit Cube"):
 
         ax.set_title(title)
         ax.set_xlabel('x', fontsize=12)
@@ -19,7 +22,7 @@ class Point():
         # plt.ylim([0,1])
 
     def plot_point(self, ax, col='r', size=5):
-        self.basic_plot()
+        self.basic_plot(ax)
         ax.plot3D(self.x, self.y, self.z, 'o', color=col, ms=size)
 
 

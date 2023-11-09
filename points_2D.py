@@ -1,3 +1,7 @@
+
+import numpy as np
+import matplotlib.pyplot as plt
+
 class Point():
     def __init__(self, x=0, y=0):
         self.xy_value = np.array([x, y])
@@ -61,7 +65,7 @@ class Line():
     def midpoint(self):
         p1 = self.point1
         p2 = self.point2
-        return point((p1.x+p2.x)/2, (p1.y+p2.y)/2)
+        return Point((p1.x+p2.x)/2, (p1.y+p2.y)/2)
     
 
 
@@ -79,6 +83,6 @@ def intersect(line1, line2):
     x, y, z = np.cross(l1, l2)          # point of intersection
     if z == 0:                          # lines are parallel
         return (float('inf'), float('inf'))
-    return point(x/z, y/z)
+    return Point(x/z, y/z)
 
 
